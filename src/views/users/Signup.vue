@@ -13,6 +13,20 @@ import Button from 'primevue/button'
         class="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
     </div>
 
+    <!-- 비밀번호 -->
+    <div class="flex flex-col gap-4">
+      <label class="font-medium text-gray-700 text-lg">비밀번호</label>
+      <InputText v-model="firstName" placeholder="비밀번호를 입력하세요" 
+        class="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    </div>    
+
+    <!-- 비밀번호 -->
+    <div class="flex flex-col gap-4">
+      <label class="font-medium text-gray-700 text-lg">비밀번호 재입력</label>
+      <InputText v-model="firstName" placeholder="비밀번호를 재입력하세요" 
+        class="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    </div>    
+    
     <!-- 이름 -->
     <div class="flex flex-col gap-4">
       <label class="font-medium text-gray-700 text-lg">이름</label>
@@ -20,12 +34,34 @@ import Button from 'primevue/button'
         class="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
     </div>
 
-    <!-- 비밀번호 -->
-    <div class="flex flex-col gap-4">
-      <label class="font-medium text-gray-700 text-lg">비밀번호</label>
-      <InputText v-model="firstName" placeholder="비밀번호를 입력하세요" 
-        class="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-    </div>    
+  <!-- 성별 -->
+  <div class="flex flex-col gap-4">
+    <label class="font-medium text-gray-700 text-lg">성별</label>
+
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2">
+        <input
+          type="radio"
+          id="male"
+          value="M"
+          v-model="gender"
+          class="h-4 w-4 text-blue-500"
+        />
+        <label for="male" class="text-gray-700">남자</label>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input
+          type="radio"
+          id="female"
+          value="F"
+          v-model="gender"
+          class="h-4 w-4 text-blue-500"
+        />
+        <label for="female" class="text-gray-700">여자</label>
+      </div>
+    </div>
+  </div>
 
     <!-- 이메일 -->
     <div class="flex flex-col gap-4">

@@ -1,5 +1,5 @@
 <template>
-  <footer>© 2022 onda2me by global component</footer> 
+  <footer>인플루언서 모집 플랫폼</footer> 
 </template>
 
 <style>
