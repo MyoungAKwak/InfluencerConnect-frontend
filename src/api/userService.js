@@ -1,16 +1,11 @@
 import axios from 'axios'
 
-// 백엔드 기본 URL
-const API_BASE = 'http://localhost:8081/api/users'
+// 프록시 key와 동일하게 '/api' 사용
+const api = axios.create({
+  baseURL: '/api',
+})
 
-/**
- * 회원가입
- * @param {Object} data { loginId, userName, password, email }
- */
-export const createUser = (data) => axios.post(API_BASE, data)
-
-/**
- * 로그인
- * @param {Object} credentials { loginId, password }
- */
-export const loginUser = (credentials) => axios.post(`${API_BASE}/login`, credentials)
+export const getUser = (id) => api.get(`/user/${id}`)
+export const createUser = (data) => api.post('/user', data)
+export const updateUser = (id, data) => api.put(`/user/${id}`, data)
+export const deleteUser = (id) => api.delete(`/user/${id}`)
