@@ -44,6 +44,21 @@ const router = createRouter({
       component: () => import('../views/shipping/List.vue'),
     },
     {
+      path: '/campaign/list',
+      name: 'campaign-list',
+      component: () => import('../views/campaign/List.vue'),
+    },
+    {
+      path: '/campaign/edit',
+      name: 'campaign-edit',
+      component: () => import('../views/campaign/Edit.vue'),
+    },
+    {
+      path: '/campaign/detail',
+      name: 'campaign-detail',
+      component: () => import('../views/campaign/Detail.vue'),
+    },
+    {
       path: '/users/login',
       name: 'users-login',
       component: () => import('../views/users/Login.vue'),

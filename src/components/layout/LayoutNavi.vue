@@ -64,7 +64,15 @@ const search = () => console.log(searchText.value)
               커뮤니티
             </RouterLink>
           </li>
-
+          <li>
+            <RouterLink
+              to="/campaign/edit"
+              class="font-semibold text-gray-700 hover:text-green-500"
+              active-class="text-green-500"
+            >
+              인플루언서 모집
+            </RouterLink>
+          </li>
           <li>
             <RouterLink
               to="/board/list"
