@@ -91,7 +91,7 @@ const saveCampaign = async () => {
     payload.append('storeAddress', address.value)
     payload.append('categoryId', form.categoryId)
     payload.append('content', form.content)
-    if (form.imageurl) payload.append('imageUrl', form.imageurl)
+    if (form.imageurl) payload.append('thumbnail', form.imageurl)
     console.log('form.imageurl', form.imageurl)
     await createCampaign(payload)
     router.push('/campaign/list')
@@ -131,7 +131,7 @@ const saveCampaign = async () => {
         <div class="space-y-2">
           <label class="text-lg font-bold">썸네일 등록</label>
           <FileUpload
-            name="attachments"
+            name="thumbnail"
             mode="advanced"
             multiple
             accept="image/*"
