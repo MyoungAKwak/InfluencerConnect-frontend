@@ -66,7 +66,7 @@ const search = () => console.log(searchText.value)
           </li>
           <li>
             <RouterLink
-              to="/campaign/edit"
+              to="/campaign/list"
               class="font-semibold text-gray-700 hover:text-green-500"
               active-class="text-green-500"
             >
