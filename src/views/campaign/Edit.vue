@@ -4,6 +4,7 @@ import InputText from 'primevue/inputtext'
 import FileUpload from 'primevue/fileupload'
 import Button from 'primevue/button'
 import Dropdown from 'primevue/dropdown'
+
 import { useRouter, useRoute } from 'vue-router'
 import { createCampaign } from '@/api/campaign.Service'
 import { Form } from '@primevue/forms'
@@ -87,12 +88,12 @@ const saveCampaign = async () => {
     // FormData 생성
     const payload = new FormData()
     payload.append('storeName', form.storeName)
-    payload.append('phone', `010-${form.phoneMiddle}-${form.phoneLast}`)
+    payload.append('storePhone', `010-${form.phoneMiddle}-${form.phoneLast}`)
     payload.append('storeAddress', address.value)
     payload.append('categoryId', form.categoryId)
     payload.append('content', form.content)
     if (form.imageurl) payload.append('thumbnail', form.imageurl)
-    console.log('form.imageurl', form.imageurl)
+    console.log('form', form)
     await createCampaign(payload)
     router.push('/campaign/list')
   } catch (error) {
